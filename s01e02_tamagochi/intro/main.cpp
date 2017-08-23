@@ -97,8 +97,9 @@ struct Tamagochi{
 };
 
 struct TamaFenix : public Tamagochi{
-    TamaFenix(string nome, Tipo tipo):
-        Tamagochi(nome, tipo){
+    TamaFenix(string nome, Tipo tipo, int vidas) : 
+        Tamagochi(nome, tipo)
+    {
     }
 
     void levarDano(int value){
@@ -120,10 +121,15 @@ struct TamaFenix : public Tamagochi{
 #include <cstdlib>
 #include <ctime>
 
+struct Pessoa{
+    string nome;
+    int idade;
+};
+
 int main()
 {    
-
     srand(time(NULL));
+
     Tamagochi * t1 = new TamaFenix("Bolsonaro", Unicornio);
     Tamagochi * t2 = new Tamagochi("MariaDoRosario", Borboleta);
     t2->vida += 30;
