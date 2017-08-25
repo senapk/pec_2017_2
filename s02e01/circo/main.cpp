@@ -11,6 +11,7 @@ public:
         this->nome = nome;
         this->especialidade = especialidade;
     }
+    float salario;
 };
 
 class Pessoa{
@@ -27,7 +28,7 @@ public:
         this->preferencias = preferencias;
     }
 
-    void verEspetaculo(vector<Circense> vetor){
+    void verEspetaculo(vector<Circense>& vetor){
 
         for (Circense& circense : vetor)
             for(string pref : preferencias)
