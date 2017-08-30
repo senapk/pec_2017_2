@@ -10,9 +10,6 @@ T read(){
     return t;
 }
 
-
-
-
 struct Operacao{
     string descricao;
     float valor;
@@ -65,9 +62,15 @@ public:
 
 };
 
-int main(){
+void inicializar(Conta& conta){
+    conta = Conta(5);
+    conta.deposito(50);
+    conta.saque(10);
+    conta.deposito(200);
+    conta.saque(1000);//nao deve aparecer esse saque
+}
 
-    Conta conta;
+void interacaoUsuario(Conta& conta){
     string op;
     cout << "digite help" << endl;
     while(op != "fim"){
@@ -100,21 +103,37 @@ int main(){
                 cout << operacao.descricao << operacao.valor << endl;
             }
         }
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
 }
+
+int main(){
+    Conta conta;
+    inicializar(conta);
+    interacaoUsuario(conta);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

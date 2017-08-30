@@ -21,3 +21,7 @@
 - Apresentação do moodle da disciplina
 - Construção da Conta Bancária em C++ com UI de comandos
 - **TODO**: Fazer o JunkFoodMachine e postar no moodle
+
+## s03e01 - Contato
+- Exercício de level 1 - Contato
+- Tira dúvidas
