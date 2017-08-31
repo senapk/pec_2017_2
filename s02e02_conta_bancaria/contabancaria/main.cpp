@@ -43,7 +43,7 @@ public:
             return false;
 
         this->saldo -= valor;
-        this->extrato.push_back(Operacao("Saque: ", valor));
+        this->extrato.push_back(Operacao("Saque: ", -valor));
 
         return true;
     }
@@ -72,16 +72,19 @@ void inicializar(Conta& conta){
 
 void interacaoUsuario(Conta& conta){
     string op;
-    cout << "digite help" << endl;
+
     while(op != "fim"){
+        cout << "digite comando ou help: ";
         cin >> op;
 
         if(op == "help"){
-            cout << "iniciar _id" << endl
+            cout << "---------" << endl
+                 << "iniciar $id" << endl
                  << "saldo" << endl
-                 << "saque _valor" << endl
-                 << "deposito _valor" << endl
+                 << "saque $valor" << endl
+                 << "deposito $valor" << endl
                  << "extrato" << endl
+                 << "extratoN $qtd" << endl
                  << "fim" << endl;
         }
 
