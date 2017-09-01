@@ -25,3 +25,8 @@
 ## s03e01 - Contato
 - Exercício de level 1 - Contato
 - Tira dúvidas
+
+## s03e02 - Anotações
+- Exercício anotaçẽos level 2
+- Explicações ponteiros e referências
+- Sistema de login
